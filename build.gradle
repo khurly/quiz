@@ -1,0 +1,15 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+allprojects {
+    group = 'org.khurley.quiz'
+    version = '1.0'
+}
+
+subprojects {
+	apply plugin: 'java'
+	
+	repositories {
+        mavenCentral()
+    }
+}

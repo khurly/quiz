@@ -8,7 +8,7 @@ package com.khurley.quiz.entity;
  */
 public class Quiz {
 
-	private Integer id;
+	private int id;
 
 	private String title;
 
@@ -26,6 +26,10 @@ public class Quiz {
 		return id;
 	}
 
+	public static Builder builder() {
+		return new Builder();
+	}
+	
 	public static class Builder {
 
 		private Integer id;
