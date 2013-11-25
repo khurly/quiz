@@ -19,9 +19,9 @@ public class Quiz {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+	private long id;
 
-	@Column(name = "tittle")
+	@Column(name = "title")
 	private String title;
 
 	@Column(name = "comments")
@@ -44,7 +44,7 @@ public class Quiz {
 		return title;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 }
