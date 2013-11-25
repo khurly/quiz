@@ -20,6 +20,7 @@ public class QuizTest {
 	@Test
 	public void test_create() {
 		Quiz quiz = builder().id(ID).title(TITLE).comments(COMMENTS).build();
+		
 		assertEquals(ID, quiz.getId());
 		assertEquals(TITLE, quiz.getTitle());
 		assertEquals(COMMENTS, quiz.getComments());
