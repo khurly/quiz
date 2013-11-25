@@ -14,11 +14,11 @@ import javax.persistence.Table;
  * 
  */
 @Entity
-@Table(name="quiz")
+@Table(name = "quiz")
 public class Quiz {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
 	@Column(name = "tittle")
@@ -31,7 +31,7 @@ public class Quiz {
 		this.title = title;
 		this.comments = comments;
 	}
-	
+
 	protected Quiz() {
 		// hibernate requires allways
 	}
@@ -46,5 +46,5 @@ public class Quiz {
 
 	public int getId() {
 		return id;
-	}	
+	}
 }
