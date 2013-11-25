@@ -22,7 +22,7 @@ public class Quiz {
 		return title;
 	}
 
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
 

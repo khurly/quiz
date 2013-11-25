@@ -1,7 +1,16 @@
 package com.khurley.quiz.entity;
 
+import static com.khurley.quiz.entity.Quiz.builder;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
+/**
+ * testing that Quiz.Builder is working fine.
+ * 
+ * @author khurley
+ * 
+ */
 public class QuizTest {
 
 	private static final int ID = 1;
@@ -10,8 +19,9 @@ public class QuizTest {
 
 	@Test
 	public void test_create() {
-		Quiz quiz = Quiz.builder().id(ID).title(TITLE).comments(COMMENTS)
-				.build();
-		System.out.println("coco");
+		Quiz quiz = builder().id(ID).title(TITLE).comments(COMMENTS).build();
+		assertEquals(ID, quiz.getId());
+		assertEquals(TITLE, quiz.getTitle());
+		assertEquals(COMMENTS, quiz.getComments());
 	}
 }
