@@ -33,7 +33,7 @@ public class Quiz {
 	}
 	
 	protected Quiz() {
-		// hibernate requires
+		// hibernate requires allways
 	}
 
 	public String getComments() {
