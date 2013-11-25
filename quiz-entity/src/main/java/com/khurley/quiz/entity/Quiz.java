@@ -1,18 +1,40 @@
 package com.khurley.quiz.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Dummy class for managing quiz
  * 
  * @author khurley
  * 
  */
+@Entity
+@Table(name="quiz")
 public class Quiz {
 
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
+	@Column(name = "tittle")
 	private String title;
 
+	@Column(name = "comments")
 	private String comments;
+
+	public Quiz(String title, String comments) {
+		this.title = title;
+		this.comments = comments;
+	}
+	
+	protected Quiz() {
+		// hibernate requires
+	}
 
 	public String getComments() {
 		return comments;
@@ -24,39 +46,5 @@ public class Quiz {
 
 	public int getId() {
 		return id;
-	}
-
-	public static Builder builder() {
-		return new Builder();
-	}
-	
-	public static class Builder {
-
-		private Integer id;
-		private String title;
-		private String comments;
-
-		public Builder id(Integer val) {
-			this.id = val;
-			return this;
-		}
-
-		public Builder title(String val) {
-			this.title = val;
-			return this;
-		}
-
-		public Builder comments(String val) {
-			this.comments = val;
-			return this;
-		}
-
-		public Quiz build() {
-			Quiz quiz = new Quiz();
-			quiz.comments = this.comments;
-			quiz.id = this.id;
-			quiz.title = this.title;
-			return quiz;
-		}
-	}
+	}	
 }

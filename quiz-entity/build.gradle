@@ -1,5 +1,11 @@
 apply plugin: 'eclipse'
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile("org.springframework.data:spring-data-jpa:1.4.2.RELEASE")
+    compile("org.springframework:spring-orm:3.2.4.RELEASE")
+    compile("org.springframework:spring-context:3.2.4.RELEASE")
+    compile("org.hibernate:hibernate-entitymanager:4.2.7.SP1")
+    compile("mysql:mysql-connector-java:5.1.27")
+    testCompile("junit:junit:4.11")
+    testCompile("org.springframework:spring-test:3.2.4.RELEASE")
 }
