@@ -8,4 +8,5 @@ dependencies {
     compile("mysql:mysql-connector-java:5.1.27")
     testCompile("junit:junit:4.11")
     testCompile("org.springframework:spring-test:3.2.4.RELEASE")
+    testCompile("com.google.guava:guava:15.0")
 }
