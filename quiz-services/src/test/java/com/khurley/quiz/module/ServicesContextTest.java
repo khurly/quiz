@@ -1,4 +1,4 @@
-package com.khurley.quiz;
+package com.khurley.quiz.module;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -6,16 +6,16 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.khurley.quiz.dao.QuizRepository;
+import com.khurley.quiz.api.services.QuizService;
 
-public class ApplicationConfigTest {
+public class ServicesContextTest {
 
 	@Test
 	public void bootstrapAppFromJavaConfig() {
 
 		ApplicationContext context = new AnnotationConfigApplicationContext(
-				EntityContext.class);
+				ServicesApplicationContext.class);
 		assertNotNull(context);
-		assertNotNull(context.getBean(QuizRepository.class));
+		assertNotNull(context.getBean(QuizService.class));
 	}
 }

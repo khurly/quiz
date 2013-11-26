@@ -4,5 +4,6 @@ dependencies {
     compile project(':quiz-entity')
     compile("org.springframework:spring-context:${springVersion}")
     testCompile("junit:junit:${junitVersion}")
-    testCompile("org.springframework:spring-test:${springVersion}")    
+    testCompile("org.springframework:spring-test:${springVersion}")
+    testCompile("org.mockito:mockito-core:1.9.5")  
 }
