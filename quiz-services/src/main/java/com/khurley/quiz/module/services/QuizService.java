@@ -11,54 +11,54 @@ import com.khurley.quiz.entity.Quiz;
 @Component
 public class QuizService implements com.khurley.quiz.api.services.QuizService {
 
-	private QuizRepository quizRepository;
+	private QuizRepository repository;
 
 	@Autowired
-	public QuizService(QuizRepository quizRepository) {
-		this.quizRepository = quizRepository;
+	public QuizService(QuizRepository repository) {
+		this.repository = repository;
 	}
 
 	@Override
 	public long createQuiz(Quiz quiz) {
-		return quizRepository.save(quiz).getId();
+		return repository.save(quiz).getId();
 	}
 
 	@Override
 	public void deleteQuiz(long id) {
-		quizRepository.delete(id);
+		repository.delete(id);
 	}
 
 	@Override
 	public void updateQuiz(Quiz quiz) {
-		quizRepository.save(quiz);
+		repository.save(quiz);
 	}
 
 	@Override
 	public Iterable<Quiz> retrieveAll() {
-		return quizRepository.findAll();
+		return repository.findAll();
 	}
 
 	@Override
 	public Quiz retrieveQuiz(long id) {
-		return quizRepository.findOne(id);
+		return repository.findOne(id);
 	}
 
 	@Override
 	public Quiz retrieveQuizByTitle(String title) {
-		return quizRepository.findByTitle(title);
+		return repository.findByTitle(title);
 	}
 
 	@Override
 	public Page<Quiz> retrieveQuizByTitleSnippet(String titleSnippet) {
-		return quizRepository.findByTitleContaining(titleSnippet,
-				new PageRequest(0, 50));
+		return repository.findByTitleContaining(titleSnippet, new PageRequest(
+				0, 50));
 	}
 
 	@Override
 	public Page<Quiz> retrieveQuizByTitleSnippet(String titleSnippet, int page,
 			int size) {
-		return quizRepository.findByTitleContaining(titleSnippet,
-				new PageRequest(page, size));
+		return repository.findByTitleContaining(titleSnippet, new PageRequest(
+				page, size));
 	}
 
 }

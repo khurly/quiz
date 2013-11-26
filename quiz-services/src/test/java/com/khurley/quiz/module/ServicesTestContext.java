@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.Primary;
 
 import com.khurley.quiz.dao.QuizRepository;
 
@@ -15,8 +14,7 @@ import com.khurley.quiz.dao.QuizRepository;
 @Import(ServicesContext.class)
 public class ServicesTestContext {
 
-	@Bean(name = "quizRepository")
-	@Primary
+	@Bean
 	public QuizRepository quizRepository() {
 		return mock(QuizRepository.class);
 	}
