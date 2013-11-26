@@ -1,3 +1,4 @@
 rootProject.name = "quiz"
 
 include "quiz-entity"
+include "quiz-services"

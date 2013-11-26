@@ -8,6 +8,9 @@ allprojects {
 subprojects {
 	apply plugin: 'java'
 	
+	ext.springVersion = "3.2.4.RELEASE"
+	ext.junitVersion = "4.11"
+	
 	repositories {
         mavenCentral()
     }
