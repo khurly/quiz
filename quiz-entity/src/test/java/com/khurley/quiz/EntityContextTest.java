@@ -11,7 +11,7 @@ import com.khurley.quiz.dao.QuizRepository;
 public class EntityContextTest {
 
 	@Test
-	public void bootstrapAppFromJavaConfig() {
+	public void test_entity_context() {
 
 		ApplicationContext context = new AnnotationConfigApplicationContext(
 				EntityContext.class);

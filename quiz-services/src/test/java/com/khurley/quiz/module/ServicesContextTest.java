@@ -11,7 +11,7 @@ import com.khurley.quiz.api.services.QuizService;
 public class ServicesContextTest {
 
 	@Test
-	public void bootstrapAppFromJavaConfig() {
+	public void test_service_context() {
 
 		ApplicationContext context = new AnnotationConfigApplicationContext(
 				ServicesApplicationContext.class);
